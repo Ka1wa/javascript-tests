@@ -5,7 +5,7 @@ function capitalize(word)
 {
     // 코드 여기 작성해야 한다. 대영문자로 리턴해야 한다!
 
-    return;
+    return word.toUpperCase();
 }
 
 
