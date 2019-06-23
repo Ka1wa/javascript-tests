@@ -8,7 +8,9 @@ function contains(word, text)
 {
     // 코드 여기 작성해야 한다. 리턴해야 한다!
 
-    return;
+    var lowerCase = text.toLowerCase();
+
+    return lowerCase.indexOf(word.toLowerCase()) >= 0;
 }
 
 
