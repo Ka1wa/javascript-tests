@@ -7,7 +7,8 @@ function capitalize(word)
 
     return word.toUpperCase();
 }
-
+ var aa=AudioParamMap
+ //이렇게 다시 보낼께
 
 
 
