@@ -7,8 +7,10 @@ function capitalize(word)
 
     return word.toUpperCase();
 }
-
-
+ 
+ ///자꾸 에러라고 하지마
+  var aaaaaa=1;
+  
 
 
 
