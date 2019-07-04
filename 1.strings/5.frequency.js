@@ -4,7 +4,7 @@
 //   "aaaaaaaaaaaaaaaaabbbbcddddeeeeee" => "a"
 //   "bBbbaababbBaaccccCdBbbbBbbdDdCcc" => "b"
 //   "aaaaaabbbbbbccccccddddddeeeeee" => false
-function frequency(letters){
+function frequency_min(letters){
     var arraying = letters.split("");
     var obj = {};
     for (var char in arraying){
@@ -23,18 +23,44 @@ function frequency(letters){
     }else {
         return sorting[0][0];
     }
-
-    
-
 }
 
+function frequency(letters)
+{
+    var obj = {};
 
+    letters.split("").forEach(function(letter)
+    {
+        if(letter in obj)
+        {
+            obj[letter] += 1;
+        }
+        else
+        {
+            obj[letter] = 1;
+        }
+    });
 
+    var maxLetter = false;
+    var maxCounter = 0;
 
+    for(letter in obj)
+    {
+        var count = obj[letter];
 
+        if(count > maxCounter)
+        {
+            maxCounter = count;
+            maxLetter = letter;
+        }
+        else if(count === maxCounter)
+        {
+            maxLetter = false;
+        }
+    }
 
-
-
+    return maxLetter;
+}
 
 // 테스트 코드
 // 이 라인 후 수정하지 마세요.
