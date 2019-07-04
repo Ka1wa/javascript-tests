@@ -4,11 +4,28 @@
 //   "aaaaaaaaaaaaaaaaabbbbcddddeeeeee" => "a"
 //   "bBbbaababbBaaccccCdBbbbBbbdDdCcc" => "b"
 //   "aaaaaabbbbbbccccccddddddeeeeee" => false
-function frequency(letters)
-{
-    // 코드 여기 작성해야 한다. 리턴해야 한다!
+function frequency(letters){
+    var arraying = letters.split("");
+    var obj = {};
+    for (var char in arraying){
+        var index = arraying[char];
+        obj[index] = obj[index]==undefined?1:obj[index]+=1;
+    };
+    var sorting = [];
+    for (var freq in obj){
+        sorting.push([freq,obj[freq]]);
+    }
+    sorting.sort(function (a,b) {
+        return b[1] - a[1];
+    })
+    if ((sorting[0][1])-(sorting[1][1])===0){
+        return false
+    }else {
+        return sorting[0][0];
+    }
+
     
-    return;
+
 }
 
 
